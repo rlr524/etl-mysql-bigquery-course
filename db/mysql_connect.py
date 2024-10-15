@@ -29,3 +29,7 @@ def connect_database() -> Optional[mysql.connector]:
         return conn
     else:
         print("The database connection was unsuccessful...")
+
+def disconnect_database(conn):
+    conn.close()
+    print("Connection closed!")
